@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1'
+version = '1.0'
 
 long_description = (
-    open('README.txt').read()
+    open('README.md').read()
     + '\n' +
     'Contributors\n'
     '============\n'
@@ -21,17 +21,24 @@ setup(name='collective.clipboardupload',
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        "Environment :: Web Environment",
-        "Framework :: Plone",
-        "Operating System :: OS Independent",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
-        "Topic :: Software Development :: Libraries :: Python Modules",
+          "Framework :: Plone",
+          "Framework :: Plone :: 4.0",
+          "Framework :: Plone :: 4.1",
+          "Framework :: Plone :: 4.2",
+          "Framework :: Zope2",
+          "Framework :: Zope3",
+          "Environment :: Web Environment",
+          "Operating System :: OS Independent",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 2.6",
+          "Programming Language :: Python :: 2.7",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "License :: OSI Approved :: GNU General Public License (GPL)",
         ],
-      keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      keywords='Zope CMF Plone Clipboard Upload',
+      author='Quintagroup',
+      author_email='support@quintagroup.com',
+      url='https://github.com/quintagroup/collective.clipboardupload',
       license='gpl',
       packages=find_packages('src'),
       package_dir={'': 'src'},
