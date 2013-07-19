@@ -50,7 +50,10 @@ setup(name='collective.clipboardupload',
           'beautifulsoup4',
           # -*- Extra requirements: -*-
       ],
-      extras_require={'tests': ['plone.app.testing']},
+      extras_require= {
+          'tests': [ 'plone.app.testing[robot]>=4.2.2',
+                     'plone.app.robotframework',]
+      },
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]

@@ -30,4 +30,4 @@ class ClipboarduploadtLayer(PloneSandboxLayer):
 COLLECTIVE_CLIPBOARDUPLOAD_FIXTURE = ClipboarduploadtLayer()
 COLLECTIVE_CLIPBOARDUPLOAD_ROBOT_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_CLIPBOARDUPLOAD_FIXTURE, AUTOLOGIN_LIBRARY_FIXTURE, z2.ZSERVER),
-    name="CollectiveClipboardupload:Robot")
+    name="collective.clipboardupload:Robot")
