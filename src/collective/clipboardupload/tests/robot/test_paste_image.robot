@@ -36,7 +36,7 @@ Go to 'create a new document' form
     Input Text  title   ${document_name}
 
 Paste image from clipboard
-    ${data}=  Get Binary File   src/collective/clipboardupload/tests/robot/owl.jpg.base64
+    ${data}=  Get Binary File   ${CURDIR}/owl.jpg.base64
     Wait Until Page Contains Element   text_ifr    30
     Select Frame    text_ifr
     Execute JavaScript  img=window.document.createElement("img");img.src="data:image/jpeg;base64,${data}";window.document.getElementsByTagName('body')[0].appendChild(img)
@@ -55,7 +55,7 @@ Go to 'Edit Document' form
 
 As the result - link of the created image will replace the image data
     [Arguments]         ${images num}=1
-    ${data}=  Get Binary File   src/collective/clipboardupload/tests/robot/owl.jpg.base64
+    ${data}=  Get Binary File   ${CURDIR}/owl.jpg.base64
     Xpath Should Match X Times  //div[@id="content-core"]//img   ${images num}
     Page Should Not Contain Image   //img[@src="data:image/jpeg;base64,${data}"]
 
