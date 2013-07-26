@@ -38,9 +38,6 @@ After you have installed the product, activate it via Site Setup -> Add-ons sect
 Authors
 -------
 
-* Joe Schmoe, Original Author
-* Bob Slob, contributed monkey patches
-* Jane Main, wrote flibberty module
 * Maksym Shalenyy
 
 
