@@ -38,6 +38,6 @@ After you have installed the product, activate it via Site Setup -> Add-ons sect
 Authors
 -------
 
-* Maksym Shalenyy
+* Maksym Shalenyi
 
 
