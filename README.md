@@ -13,7 +13,9 @@ Quintagroup has developed a collective.clipboardupload tool that essentially all
 Compatibility
 -------------
 
-* Plone 4.x
+* Plone 4.0
+* Plone 4.1
+* Plone 4.3
 
 Installation
 ------------
