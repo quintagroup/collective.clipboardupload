@@ -2,8 +2,8 @@ collective.clipboardupload
 ==========================
 
 
-[![Build Status](https://travis-ci.org/quintagroup/collective.clipboardupload.png?branch=master)](https://travis-ci.org/quintagroup/collective.clipboardupload)
-
+.. image:: https://travis-ci.org/quintagroup/collective.clipboardupload.png
+       :target: https://travis-ci.org/quintagroup/collective.clipboardupload
 
 Introduction
 ------------
