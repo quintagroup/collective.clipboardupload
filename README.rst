@@ -17,6 +17,9 @@ Compatibility
 * Plone 4.1
 * Plone 4.3
 
+Know browser issues: Ctrl+V does not always work for me in Firefox (MacOSX 10.8), so menu Edit -> Paste to the rescue. 
+Safari works same way. Chrome fails 100%. Works in Windows.
+
 Installation
 ------------
 
