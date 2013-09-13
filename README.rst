@@ -29,13 +29,16 @@ In your buildout.cfg add the following::
         ...
         collective.clipboardupload
 
+It will engage automatically after buildout is rebuilt and instance started.
+
 Usage
 -----
 
-*Collective.clipboardupload* is a Python package, developed to simplify the  process of inserting images into visual editor without the need to upload the image.
+*Collective.clipboardupload*, developed to simplify the process of inserting images into TinyMCE without the need to upload the image, with simple Copy/Paste operation.
 
- 
-After you have installed the product, you can copy any image from your computer or some web source and then click "Paste" on your visual editor or by key combination. Those pictures will be automatically uploaded to the folder that contains a page and stored as an image content type. Furthermore the path to the image itself upon saving in TinyMCE  is rendered as *resolveuid* link. 
+Open an image in, for example, Preview.app select an area and copy it to clipboard. Switch to Plone TinyMCE and Paste. Use your browser menu Edit -> Paste in case Ctrl+V fails.
+
+The picture will be automatically uploaded to the edited page containing folder and stored as an Plone Image. Upon save the Image path is converted to *resolveuid* link.
 
 Authors
 -------
