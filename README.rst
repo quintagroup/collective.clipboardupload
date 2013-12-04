@@ -10,7 +10,7 @@ Introduction
 
 Quintagroup has developed a collective.clipboardupload tool that essentially allows you to copy images and past them directly  into TinyMCE visual editor.
 
-.. image:: http://quintagroup.com/services/plone-development/products/collective.clipboardupload/clipboardupload.png
+.. image:: http://quintagroup.com/services/plone-development/products/collective.clipboardupload/collective-clipboardupload.png
        :target: http://www.youtube.com/watch?v=V3-z4M8M74g
 
 Compatibility
