@@ -90,6 +90,7 @@ import operator
 from itertools import ifilter
 from DateTime import DateTime
 from bs4 import BeautifulSoup
+from zope.event import notify
 
 RE_IMAGE_DATA = re.compile(r'data:image/\w{2,5};base64,(.+)')
 
@@ -101,9 +102,12 @@ def generate_image_object(context, data):
     """
     uid = 'Clipboard_image_%s' % DateTime().strftime("%Y-%m-%d-%H%M.%f")
     name = context.invokeFactory(type_name='Image', id=uid)
-    context[name].setImage(base64.b64decode(data))
+    obj = context[name]
+    obj.setImage(base64.b64decode(data))
+    from Products.Archetypes.event import ObjectInitializedEvent
+    notify(ObjectInitializedEvent(obj))
     transaction.commit()
-    return context[name].UID()
+    return obj.UID()
 
 
 def extract_image_data_from_body(context, event):
