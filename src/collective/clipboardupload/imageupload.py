@@ -118,10 +118,12 @@ def extract_image_data_from_body(context, event):
     """
     text = context.getRawText()
     soup = BeautifulSoup(text)
-    # we need collect both BS image objects and images data returned by RE
-    images = ((i, RE_IMAGE_DATA.search(i.get('src', ''))) \
-               for i in soup.findAll('img'))
-    for image, data in ifilter(operator.itemgetter(1), images):
-        resolved_uid = generate_image_object(context, data.group(1))
-        image['src'] = 'resolveuid/%s' % resolved_uid
-    context.setText(str(soup.html.body)[6:-7])  # just body without <body> tags
+    if soup.html:
+        # we need collect both BS image objects and images data returned by RE
+        images = ((i, RE_IMAGE_DATA.search(i.get('src', ''))) \
+                   for i in soup.findAll('img'))
+        for image, data in ifilter(operator.itemgetter(1), images):
+            resolved_uid = generate_image_object(context, data.group(1))
+            image['src'] = 'resolveuid/%s' % resolved_uid
+        if soup.html.body:
+            context.setText(str(soup.html.body)[6:-7])  # just body without <body> tags
